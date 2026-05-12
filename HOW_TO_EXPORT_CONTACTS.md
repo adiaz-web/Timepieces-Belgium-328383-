@@ -150,7 +150,7 @@ def main():
 
     for group in selected:
         print(f"\nFetching contacts for '{group['name']}'...")
-        contacts = get_contacts_in_group(TOKEN, group["id"])
+        contacts = get_contacts_in_group(group["id"])
         safe_name = group["name"].lower().replace(" ", "_").replace("/", "-")
         filename = f"{safe_name}_contacts.csv"
         save_csv(contacts, filename)
